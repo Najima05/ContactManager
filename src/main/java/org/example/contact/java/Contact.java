@@ -2,6 +2,10 @@ package org.example.contact.java;
 
 import java.util.ArrayList;
 
+/**
+ * Represents a contact entry with a name and phone number.
+ * Stores basic contact information that can be read and updated through accessor and mutator methods.
+ */
 public class Contact {
 
     private String name;
