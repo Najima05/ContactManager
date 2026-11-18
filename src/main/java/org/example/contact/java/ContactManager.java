@@ -29,4 +29,35 @@ public class ContactManager {
             IO.println("---------------");
         }
     }
+
+    public void searchContact(String name) {
+
+        for (Contact contact : contacts) {
+
+            if (contact.getName().equalsIgnoreCase(name)) {
+
+                IO.println("Contact found!");
+                IO.println("Name: " + contact.getName());
+                IO.println("Phone: " + contact.getPhoneNumber());
+
+                return;
+            }
+        }
+
+        IO.println("Contact not found.");
+
+    }
+
+    public void deleteContact(String name) {
+
+        boolean removed = contacts.removeIf(
+                contact -> contact.getName().equalsIgnoreCase(name));
+
+        if (removed) {
+            IO.println("Contact deleted successfully!");
+
+        } else {
+            IO.println("Contact not found.");
+        }
+    }
 }
