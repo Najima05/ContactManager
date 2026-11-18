@@ -15,4 +15,18 @@ public class ContactManager {
         contacts.add(contact);
 
     }
+
+    public void viewContacts() {
+
+        if(contacts.isEmpty()) {
+            IO.println("No contacts was founded.");
+            return;
+        }
+
+        for (Contact contact : contacts) {
+           IO.println("Name: " + contact.getName());
+            IO.println("Phone Number: " + contact.getPhoneNumber());
+            IO.println("---------------");
+        }
+    }
 }
